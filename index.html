@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PackForge — Minecraft Bedrock pack manifest checker</title>
+  <meta name="description" content="Paste your Minecraft Bedrock manifest.json and get instant, human-readable answers — 11 rules, why each one matters, and the exact fix. Runs offline, no uploads.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0e1512">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PackForge — Minecraft Bedrock pack manifest checker">
+  <meta property="og:description" content="11 rules, why each one matters, and the exact fix. Offline and beginner-friendly.">
+  <meta property="og:url" content="https://mukund-buddy.github.io/packforge/">
+  <meta property="og:image" content="https://mukund-buddy.github.io/packforge/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PackForge — Minecraft Bedrock pack manifest checker">
+  <meta name="twitter:description" content="11 rules, why each one matters, and the exact fix for your manifest.json.">
+  <link rel="canonical" href="https://mukund-buddy.github.io/packforge/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='8' fill='%230e1512'/><text x='50' y='74' font-size='58' font-family='monospace' font-weight='700' fill='%235cc46b' text-anchor='middle'>P</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#layout">Skip to checker</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <div class="brand">Pack<span class="hot">Forge</span></div>
+      <div class="actions">
+        <button id="btnCheck" class="btn primary" type="button" title="Ctrl/Cmd + Enter">Check Manifest</button>
+        <button id="btnSample" class="btn" type="button">Load Broken Sample</button>
+        <button id="btnClear" class="btn ghost" type="button">Clear</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap layout" id="layout">
+    <noscript>
+      <p class="noscript-note"><strong>PackForge needs JavaScript.</strong> All 11 rules run inside your browser — your manifest is never uploaded. Enable JavaScript to use it.</p>
+    </noscript>
+
+    <section class="pane">
+      <div class="pane-head">
+        <span id="inputLabel" class="pane-title">Your manifest.json</span>
+        <span class="pane-tools">
+          <input type="file" id="fileInput" class="file-input" accept=".json,application/json">
+          <label class="file-btn" for="fileInput">Upload .json</label>
+        </span>
+      </div>
+      <textarea id="input" aria-labelledby="inputLabel" spellcheck="false" placeholder="Paste your pack manifest.json here, or drop a file…"></textarea>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="pane">
+      <div class="pane-head">
+        <span class="pane-title">Forge Report</span>
+        <span class="pane-tools">
+          <button id="btnCopyReport" class="btn tiny" type="button">Copy report</button>
+          <span id="scoreTag" class="tag" aria-live="polite">—</span>
+        </span>
+      </div>
+      <div id="results" class="results" role="status" aria-live="polite">
+        <p class="dim">Results appear here. Click "Check Manifest".</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>Rules verified against real packs from <a href="https://mukund-buddy.github.io/Adventigle/index.html" target="_blank" rel="noopener">Adventigle</a> ·
+        Runs 100% locally ·
+        <a href="https://github.com/mukund-buddy/packforge" target="_blank" rel="noopener">Source</a> ·
+        Part of <a href="https://github.com/mukund-buddy" target="_blank" rel="noopener">The Antigle</a></p>
+    </div>
+  </footer>
+
+  <script src="rules.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
