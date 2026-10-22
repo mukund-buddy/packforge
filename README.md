@@ -8,7 +8,7 @@
 
 > Part of [The Antigle](https://github.com/mukund-buddy) 🔥 — AI-assisted build, hand-tested by a real MCPE pack user.
 
-**Live demo:** _coming soon_ · [Repository](https://github.com/mukund-buddy/packforge)
+**Live demo:** _coming soon_ · [Repository]([https://github.com/mukund-buddy/packforge](https://mukund-buddy.github.io/packforge/))
 
 ---
 
